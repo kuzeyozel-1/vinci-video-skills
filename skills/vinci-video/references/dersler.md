@@ -20,6 +20,7 @@ Her madde gerçek bir işte yaşandı. Yeni bir ders öğrenince ilgili başlı�
 
 ## Shorts (yayın kesiti)
 - **Gece yayınlama.** Gece 01:00'de yüklenen klipler akışta neredeyse hiç test edilmedi (1–12 izlenme). Hazır klibi en yakın 12–15 ya da 19–22 aralığına koy, günde en fazla 3 yükleme yap, aralarını aç. (Kas 2026)
+- **Aynı gün yüklemeleri 30 dk arayla yapma:** 21:00/21:30/22:00 yüklenen 3 Short'tan akış yalnızca ilkini test etti (ilk 3 saatte 468'e karşı 6 ve 5 izlenme). Aralara 3–4 saat koy. (Kas 2026)
 - **Toplu yükleme yapma.** Bir günde 11 yükleme günlük sınıra takıldı ve kliplerin çoğu hiç test edilmedi. (Kas 2026)
 - **Başlıkta önce oyun/olay, sonra kişi gelir** ("GTA 6'da Hulk çıktı" ✓, "Yayıncı X şunu yaptı" ✗). Oyun-önce başlıklar 1.000+ izlenme aldı, kişi-önce başlıklar takıldı. (Kas 2026)
 - **"İzlemeye devam" oranı %75 üstü iyidir, %60 altında kanca bozuktur.** %45 ve %25 ile kaydırılan kliplerin hepsi yavaş başlıyordu. (Kas 2026)
