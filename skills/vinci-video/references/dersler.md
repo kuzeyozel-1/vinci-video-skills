@@ -30,6 +30,7 @@ Her madde gerçek bir işte yaşandı. Yeni bir ders öğrenince ilgili başlı�
 
 ## Ses
 - **Klon ses kişiye benzemedi** (Chatterbox, yerel). Kanal sahibi "hiç benzemiyor" dedi. En iyisi kişinin kendi sesi: okuma metnini bir kez kaydet, replikleri kelime zamanından kes (`seslendirme`). (Kas 2026)
+- **Telefon kaydı boğuk çıkar:** 250–800 Hz baskın, 0,8–5 kHz ~15 dB zayıf ölçüldü. `kes.sh` artık netlik EQ uyguluyor (çamur -7 dB, 1,5–5 kHz +5–8 dB). Kayıtta telefonu ağza 15–20 cm tut, eli mikrofona kapatma. (Kas 2026)
 - Klon modeller "GTA 6" gibi rakam ve kısaltmaları yanlış okuyor ("Kıta ağaçta" diye duyuldu). Yapay ses şartsa rakamı yazıyla ver. (Kas 2026)
 - Fon müziği "duyulmuyor" diye geri döndü: data-volume 0.12'den 0.35'e çıkarıldı (konuşmanın 14–15 dB altı). (Kas 2026)
 
