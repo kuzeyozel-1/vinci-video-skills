@@ -1,0 +1,15 @@
+{
+  "name": "vinci-studio",
+  "owner": { "name": "Vinci Studio" },
+  "metadata": { "description": "Vinci Studio'nun özel Claude eklentileri. © 2026 Vinci Studio. Tüm hakları saklıdır." },
+  "plugins": [
+    {
+      "name": "vinci-video",
+      "source": "./",
+      "description": "Vinci Studio video kurgu sistemi (10 skill).",
+      "version": "1.0.0",
+      "author": { "name": "Vinci Studio" },
+      "license": "SEE LICENSE IN LICENSE"
+    }
+  ]
+}

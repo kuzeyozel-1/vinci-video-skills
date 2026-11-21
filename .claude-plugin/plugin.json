@@ -1,0 +1,8 @@
+{
+  "name": "vinci-video",
+  "version": "1.0.0",
+  "description": "Vinci Studio video kurgu sistemi: Reels/Shorts, sinematik marka filmi, anlatımlı 3D/motion ve çok dilli videolar, röportaj, transkript, seslendirme, ses-müzik ve AI video skill'leri.",
+  "author": { "name": "Vinci Studio" },
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": ["video", "reels", "shorts", "kurgu", "hyperframes", "vinci-studio"]
+}
