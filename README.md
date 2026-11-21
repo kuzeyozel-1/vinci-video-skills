@@ -28,7 +28,7 @@ kendi resmî kaynağından indirilir.
 
 ## Kurulum (yeni cihaz)
 
-Gerekenler: macOS ya da Linux, [Claude Code](https://claude.com/claude-code), GitHub erişimi (depo özeldir).
+Gerekenler: macOS ya da Linux, [Claude Code](https://claude.com/claude-code). GitHub girişi gerekmez.
 
 ```bash
 git clone https://github.com/kuzeyozel-1/vinci-video-skills.git ~/dev/vinci-video-skills
@@ -75,13 +75,12 @@ Claude para ya da kredi harcayan adımlardan, yayından ve müşteriye gönderme
 | `fontlar/` | Anton, Montserrat |
 | `sesler/` | Sentez efektler |
 
-## Erişim ve paylaşım
+## Erişim ve lisans
 
-Depo GitHub'da **özel**dir. Bir ekip üyesine erişim vermek için:
-`gh api -X PUT repos/kuzeyozel-1/vinci-video-skills/collaborators/<kullanici> -f permission=pull`.
-Yetki yazılı izinle verilir ve LICENSE koşullarına tabidir. Skill'ler araç kısıtlaması olmadan çalışır
-(`allowed-tools`): Claude video işlerinde komut çalıştırma ve dosya yazma için ayrıca izin istemez.
-Yayın ve harcama onayı yine kullanıcıdadır.
+Depo herkese açık olarak görüntülenebilir, ancak içerik Vinci Studio'nun mülküdür. Görüntülenebilir olması kullanım izni
+vermez. Kopyalama, dağıtma, değiştirerek yayımlama ve yapay zekâ eğitimi [LICENSE](LICENSE) gereği yazılı izne bağlıdır.
+Skill'ler araç kısıtlaması olmadan çalışır (`allowed-tools`): Claude video işlerinde komut çalıştırmak ve dosya yazmak
+için ayrıca izin istemez. Yayın ve harcama onayı yine kullanıcıdadır.
 
 ## Üçüncü taraf
 
