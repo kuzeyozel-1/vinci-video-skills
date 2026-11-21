@@ -262,10 +262,16 @@ def ease_out_back(x: float) -> float:
 def kaplama(img: Image.Image, kutu_w: int, kutu_h: int, odak=(0.5, 0.5)) -> Image.Image:
     """object-fit: cover."""
     s = max(kutu_w / img.width, kutu_h / img.height)
-    r = img.resize((math.ceil(img.width * s), math.ceil(img.height * s)), Image.BILINEAR)
+    # LANCZOS: kamera kutusu ~3x büyütülüyor; bilinear yumuşatıyordu.
+    r = img.resize((math.ceil(img.width * s), math.ceil(img.height * s)), Image.LANCZOS)
     x = int((r.width - kutu_w) * odak[0])
     y = int((r.height - kutu_h) * odak[1])
     return r.crop((x, y, x + kutu_w, y + kutu_h))
+
+
+def keskin(img: Image.Image, guc: int) -> Image.Image:
+    """Büyütülen kaynağa hafif netlik (düşük bit hızlı yayın kayıtları telefonda yumuşak görünüyor)."""
+    return img.filter(ImageFilter.UnsharpMask(radius=1.6, percent=guc, threshold=2))
 
 
 def sesli(yol: Path, tmp: Path) -> str:
@@ -348,8 +354,8 @@ def kare_kur(kare: Image.Image, t: float, is_: dict, sabit: dict, eklemler: list
     if duzen == "bolunmus":
         cam_h = sabit["cam_h"]
         tuval = Image.new("RGB", (W, H), (10, 8, 16))
-        tuval.paste(kaplama(oyun, W, H - cam_h), (0, cam_h))
-        tuval.paste(kaplama(kare.crop(kutu(is_["kamera"])), W, cam_h, (0.5, 0.35)), (0, 0))
+        tuval.paste(keskin(kaplama(oyun, W, H - cam_h), 40), (0, cam_h))
+        tuval.paste(keskin(kaplama(kare.crop(kutu(is_["kamera"])), W, cam_h, (0.5, 0.35)), 70), (0, 0))
         ImageDraw.Draw(tuval).rectangle([0, cam_h - 4, W, cam_h + 4], fill=TURUNCU)
         alt_y = cam_h
     elif duzen == "yigin":
@@ -568,7 +574,7 @@ def main():
         video = tmp / "video.mp4"
         oku = subprocess.Popen(["ffmpeg", "-v", "error", "-i", str(ham), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
         yaz = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                                "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-color_primaries", "bt709",
+                                "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p", "-color_primaries", "bt709",
                                 "-color_trc", "bt709", "-colorspace", "bt709", str(video)], stdin=subprocess.PIPE)
         boyut = sw * sh * 3
         n = 0
